@@ -5,7 +5,7 @@ import './style.scss'
 const Footer = () => {
   return (
     <>
-      <footer className="py-3 my-4">
+      <footer className="py-3 fixed-bottom">
         <div className="text-end mx-3">
             <a className="text-decoration-none" href="#header">voltar ao topo</a>
         </div>

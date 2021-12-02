@@ -1,0 +1,17 @@
+
+.btn {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    padding: 0;
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+.form {
+    position: relative;
+    max-width: 600px;
+}
+

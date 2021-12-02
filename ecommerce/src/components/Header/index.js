@@ -1,31 +1,23 @@
 import "./style.scss";
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
-
+import { Navbar, Container, Nav} from 'react-bootstrap';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
+import Logo from '../../assets/logo.png';
 const Header = () => {
   return (
     <>
       <Navbar bg="light" expand="lg" id="header">
         <Container>
-          <Navbar.Brand href="#home">Logo</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Brand href="#home"><img src={Logo} alt="logo" className="logo img-fluid"/></Navbar.Brand>
+          <div>
+            <span className="qntd-item">1</span>
+            <AiOutlineShoppingCart className="carrinho-icon" size="32" />
+          </div>
+          <Navbar.Toggle className="navbar-toggle" aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto text-center">
               <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Produtos</Nav.Link>
-              <Nav.Link href="#link">Sobre nós</Nav.Link>
-              {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown> */}
+              <Nav.Link href="#produtos">Produtos</Nav.Link>
+              <Nav.Link href="#sobrenos">Sobre nós</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
