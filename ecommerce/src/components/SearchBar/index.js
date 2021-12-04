@@ -9,7 +9,7 @@ const SearchBar = () => {
     return(
     <>
     <Formik initialValues={{ nomeUsuario: "" }} onSubmit={handleSubmit}>
-        <Form className="form mx-2 my-5">
+        <Form className="form m-auto">
           <Field
             placeholder="Busque um produto"
             required
