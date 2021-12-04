@@ -1,17 +1,25 @@
+@import '../../Sass/abstracts/mixins.scss';
+@import '../../Sass/abstracts/variables.scss';
+
 #header {
     font-size: 1.2rem;
 }
-.carrinho-icon {
-    transform: translateX(3.5rem);
-
+.div-carrinho {
 }
+
 .logo {
     width: 40px;    
     max-width: 100%;
 }
-
+.carrinho-icon {
+    color: #000;
+}
 .qntd-item {
+    width: 25px;
+    height: 25px;
     display: inline-block;
-    font-size: 20px;
-    transform: translate(3.8rem, 1rem);
+    transform: translate(.3rem, .8rem);
+    color: $primary-color-dark;
+    font-weight: bold; 
+    text-align: center;
 }
