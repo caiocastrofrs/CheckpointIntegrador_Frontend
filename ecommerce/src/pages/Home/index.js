@@ -7,7 +7,7 @@ import Categorias from '../../components/Categorias';
 import api from '../../service/api';
 import { useState, useEffect } from 'react';
 import {useCallback} from 'react';
-import { Helmet } from 'helmet';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
 

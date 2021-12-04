@@ -11,7 +11,7 @@ const Footer = () => {
         </div>
         <ul className="nav justify-content-center border-bottom pb-3 mb-3">
           <li className="nav-item">
-            <Link to="/produto/produtos" className="nav-link px-2 text-muted">
+            <Link to="/produtos" className="nav-link px-2 text-muted">
               Produtos
             </Link>
           </li>
