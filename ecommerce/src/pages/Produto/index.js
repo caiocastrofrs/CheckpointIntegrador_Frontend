@@ -8,14 +8,15 @@ const Produto = () => {
     return(
         <>
            <Header />
+           <h2 className="title"> Console Xbox Series S 512gb </h2>
            <div className="container_produto">
                <div className="container_imagem">
-                    <img src="https://pullbr-4c63.kxcdn.com/pen-drive-gb-com-memoria-cob-usb-superior-kjmj-b.png?cultureCode=pt-BR&version=2d62f59d042abd88b7065268d81d8226" alt="" />
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_939935-MLB48431344222_122021-O.webp" alt="" />
                </div>
                <div className="container_descricao">
                    <div className="container_precoDesconto">
-                    <p>R$ 1499</p>
-                    <p>20% off</p> 
+                    <p className="preco">R$ 2.499</p>
+                    <p className="desconto">20% off</p> 
                    </div>
                    <p className="dozeVezes">12xR$124,92 sem juros</p>
                    <p className="freteGratis">Frete Grátis</p>
