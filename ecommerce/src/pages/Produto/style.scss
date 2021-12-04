@@ -74,3 +74,28 @@
   text-transform: uppercase;
 }
 
+
+@media (min-width:768px) {
+  .container_produto {
+    display: flex;
+    justify-content: center;
+    margin: 0 50px;
+  }
+
+  .container_imagem {
+    width: 2000px;
+    height: 500px;
+    text-align: center;
+    // border: 1px solid black;
+  }
+
+  .container_descricao {
+    width: 2000px;
+    height: 500px;
+    // border: 1px solid black;
+    margin: 0px 50px;
+    padding: 30px;
+    
+  }
+}
+

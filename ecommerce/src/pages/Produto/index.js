@@ -1,12 +1,20 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './style.scss';
+import { Helmet } from 'react-helmet'
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
+
+
+
 const Produto = () => {
+
 
     return(
         <>
+            <Helmet>
+                <title>Bodega | Produtos</title>
+            </Helmet>
            <Header />
            <h2 className="title"> Console Xbox Series S 512gb </h2>
            <div className="container_produto">
