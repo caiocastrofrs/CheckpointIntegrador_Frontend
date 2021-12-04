@@ -1,0 +1,67 @@
+.img-card {
+    max-width:120px !important;
+    
+
+}
+.input-quant {    
+    max-width: 70px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.texto {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.buttons-icons {
+    border:none;
+    background: none;
+    text-align: center; 
+    align-items: center; 
+      
+    
+}
+
+.div-trash {    
+    display: flex;    
+    justify-content: end !important;
+    margin-right: 30px;
+    
+
+}
+
+.div-total {    
+    display: flex; 
+    align-items: flex-end;
+    flex-direction:column;
+    padding-right: 65px;
+    gap: 1rem;
+       
+    
+}
+
+
+.div-item {
+    display:flex;     
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px 0 !important;
+    
+    
+}
+
+.buttons-compra {
+    border: none;
+    display: flex;       
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right: 65px;
+    margin-bottom: 100px;
+    margin-top: 30px;
+    gap: 1rem;
+
+    .btn-car {
+        width: 190px;
+    }
+}
