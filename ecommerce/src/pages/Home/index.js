@@ -7,6 +7,8 @@ import Categorias from '../../components/Categorias';
 import api from '../../service/api';
 import { useState, useEffect } from 'react';
 import {useCallback} from 'react';
+import { Helmet } from 'helmet';
+
 const Home = () => {
 
   const [dados, setDados] = useState();
@@ -29,6 +31,9 @@ const Home = () => {
   console.log(dados);
   return (
     <>
+      <Helmet>
+        <title>Bodega | Home</title>
+      </Helmet>
       <Header />
       <SearchBar />
       <CarouselComponent />

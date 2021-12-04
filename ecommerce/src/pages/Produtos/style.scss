@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-produtos {
+    border: 1px red solid;
+    background-color: aqua;
+}
+
+.linha-produtos {
+    display: flex;
+    justify-content: center;
+}
+

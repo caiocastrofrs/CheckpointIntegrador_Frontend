@@ -1,25 +1,146 @@
 @import '../../Sass/abstracts/mixins.scss';
 @import '../../Sass/abstracts/variables.scss';
 
-#header {
-    font-size: 1.2rem;
-}
-.div-carrinho {
-}
-
 .logo {
     width: 40px;    
     max-width: 100%;
+    @include respond(big-desktop) {
+        width: 80px;
+        margin-right: 2rem;
+    }
+    
+    @include respond(desktop) {
+        width: 80px;
+        margin-right: 2rem;
+    }
+
+    @include respond(tab-land) {
+        width: 60px;
+    }
 }
-.carrinho-icon {
-    color: #000;
+
+.header-container {
+    position: relative;
+    font-size: 1.7rem;
+    padding: 1rem;
+    background-color: transparent;
+    &__link {
+        text-decoration: none;
+        color: $primary-color-dark;
+        &:hover {
+            color: $secondary-color;
+        }
+        &__div-carrinho {
+            position: relative;
+            &__qntd-item {
+                display: inline-block;
+                position: absolute;
+                bottom: -30%;
+                left: -35%;
+                font-size: 1.8rem;
+            }
+            &__icon {
+                @include respond(big-desktop) {
+                    font-size: 5.5rem;
+                }
+
+                @include respond(desktop) {
+                    font-size: 5.5rem;
+                }
+
+                @include respond(tab-land) {
+                    font-size: 5rem;
+                }
+
+                @include respond(tab-port) {
+                    font-size: 4.5rem;
+                }
+
+                @include respond(phone) {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
 }
-.qntd-item {
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    transform: translate(.3rem, .8rem);
-    color: $primary-color-dark;
-    font-weight: bold; 
-    text-align: center;
+
+.posicao-carrinho {
+    @include respond(big-desktop) {
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @include respond(desktop) {
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @include respond(tab-land) {
+        right: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @include respond(tab-port) {
+        margin-top: 3rem;
+        right: 8%;
+        top: 0;
+        transform: translateY(0);
+    }
+
+    @include respond(phone) {
+        right: 10%;
+        top: 0;
+        transform: translateY(0);
+    }
+
+    @include respond(small-phone) {
+        right: 15%;
+        top: 0;
+        transform: translateY(0);
+    }
+    position: absolute;
+    top: 0;
+
+    transform: translateX(-25%);
+
+}
+
+.nav-items {
+
+    & > :not(:first-child) {
+        padding-top: 1rem;
+    }
+
+    @include respond(big-desktop) {
+        & > :not(:first-child) {
+            padding-top: 0;
+        }
+        & > * {
+            padding: 0 2.5rem 0;
+            font-size: 2.5rem;
+        }
+    }
+
+    @include respond(desktop) {
+        & > :not(:first-child) {
+            padding-top: 0;
+        }
+        & > * {
+            padding: 0 2.5rem 0;
+            font-size: 2.5rem;
+        }
+    }
+
+    @include respond(tab-land) {
+        & > :not(:first-child) {
+            padding-top: 0;
+        }
+        & > * {
+            padding: 0 2rem 0;
+            font-size: 2.2rem;
+        }
+    }
 }
