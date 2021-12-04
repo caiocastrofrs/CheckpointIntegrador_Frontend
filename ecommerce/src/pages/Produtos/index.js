@@ -1,11 +1,12 @@
 import './style.scss';
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet';
 import Header from '../../components/Header';
-import SearchBar from '../../components/SearchBar'
-import { Row, Col, PageItem } from 'react-bootstrap';
+import SearchBar from '../../components/SearchBar';
+import { BoxFilterCategoria } from '../../components/BoxFilterCategoria';
+import { Row } from 'react-bootstrap';
 import CardProduto from '../../components/CardProduto';
 import { Container } from 'react-bootstrap';
-import Footer from '../../components/Footer/index'
+import Footer from '../../components/Footer/index';
 
 const Produtos = () => {
 
@@ -74,16 +75,18 @@ const Produtos = () => {
             </Helmet>
             <Header />
             <SearchBar />
-            <main>
-                <h2 style={{ width: '100%', textAlign: 'center'}}>Produtos</h2>
-                <Container fluid={true} className="container-produtos">
+            <BoxFilterCategoria />
+            <main className="container-produtos">
+                <h2 style={{ width: '100%', textAlign: 'center' }}>Produtos</h2>
+                <Container fluid={true}>
                     <Row className="linha-produtos">
                         {
-                        produtos && produtos.map(item => {
-                            return (
-                                <CardProduto key={item.id} produto={item} />
+                            produtos && produtos.map(item => {
+                                return (
+                                    <CardProduto key={item.id} produto={item} />
+                                )
+                            }
                             )}
-                        )}
                     </Row>
                 </Container>
             </main>

@@ -12,15 +12,15 @@ const CardProduto = ({ produto }) => {
     }
 
     return (
-        <Card style={{ width: '18rem', margin: '1rem', padding:'0.7rem' }}>
+        <Card style={{ width: '25rem', margin: '1rem', padding:'0.7rem' }}>
             <Card.Img variant="top" src={produto.imagem} />
             <Card.Body>
-                <Card.Title>{(produto.preco).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</Card.Title>
+                <Card.Title style={{ fontSize: '25px'}}>{(produto.preco).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</Card.Title>
                 <spam className="desconto-produto">20% off</spam>
             </Card.Body>
             <ListGroup className="list-group-flush" style={{fontSize: '14px'}}>
-                <ListGroupItem>{parcela}x {calcParcela()} sem juros</ListGroupItem>
-                <ListGroupItem>Frete grátis</ListGroupItem>
+                <ListGroupItem style={{ fontSize: '16px'}}>{parcela}x {calcParcela()} sem juros</ListGroupItem>
+                <ListGroupItem style={{ fontSize: '14px'}}>Frete grátis</ListGroupItem>
             </ListGroup>
         </Card>
     )
