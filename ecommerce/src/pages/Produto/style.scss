@@ -75,7 +75,7 @@
 }
 
 
-@media (min-width:768px) {
+@media (min-width:426px) {
   .container_produto {
     display: flex;
     justify-content: center;
@@ -83,10 +83,15 @@
   }
 
   .container_imagem {
-    width: 2000px;
-    height: 500px;
+    width: 800px;
+    height: 800px;
     text-align: center;
     // border: 1px solid black;
+  }
+
+  .imagem {
+    width: 700px;
+    height: 500px;
   }
 
   .container_descricao {
@@ -96,6 +101,54 @@
     margin: 0px 50px;
     padding: 30px;
     
+  }
+}
+
+
+
+
+@media (min-width:768px) {
+  .container_produto {
+    display: flex;
+    justify-content: center;
+    margin: 0 50px;
+  }
+
+  .container_imagem {
+    width: 2000px;
+    height: 800px;
+    text-align: center;
+    // border: 1px solid black;
+  }
+
+  .imagem {
+    width: 700px;
+    height: 500px;
+  }
+
+  .container_descricao {
+    width: 2000px;
+    height: 500px;
+    // border: 1px solid black;
+    margin: 0px 50px;
+    padding: 30px;
+    
+  }
+
+  .container_precoDesconto {
+    margin-bottom: 20px;
+  }
+
+  .dozeVezes {
+    margin-bottom: 20px;
+  } 
+
+  .freteGratis {
+    margin-bottom: 20px;
+  }
+
+  .buttonAdicionar {
+    margin-top: 60px;
   }
 }
 

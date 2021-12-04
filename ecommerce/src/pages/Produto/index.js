@@ -13,13 +13,13 @@ const Produto = () => {
     return(
         <>
             <Helmet>
-                <title>Bodega | Produtos</title>
+                <title>Bodega | Produto</title>
             </Helmet>
            <Header />
            <h2 className="title"> Console Xbox Series S 512gb </h2>
            <div className="container_produto">
                <div className="container_imagem">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_939935-MLB48431344222_122021-O.webp" alt="" />
+                    <img className="imagem" src="https://http2.mlstatic.com/D_NQ_NP_939935-MLB48431344222_122021-O.webp" alt="" />
                </div>
                <div className="container_descricao">
                    <div className="container_precoDesconto">
@@ -39,6 +39,10 @@ const Produto = () => {
                    
                </div>
            </div>
+
+           <p>Quem viu esse produto também comprou</p>
+
+
            <Footer />
         </>
     );
