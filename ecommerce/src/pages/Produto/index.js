@@ -17,10 +17,17 @@ const Produto = () => {
                     <p>R$ 1499</p>
                     <p>20% off</p> 
                    </div>
-                   <p>12xR$124,92 sem juros</p>
-                   <p>Frete Grátis</p>
-                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas aspernatur cum tempore nihil necessitatibus explicabo, unde animi, quaerat aliquam voluptatum consectetur voluptate eaque corrupti iusto possimus eius ratione blanditiis. Mollitia?</p>
-                   <a href="#">Adicionar ao carrinho</a>
+                   <p className="dozeVezes">12xR$124,92 sem juros</p>
+                   <p className="freteGratis">Frete Grátis</p>
+                   <p className="descricao">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas aspernatur cum tempore nihil necessitatibus explicabo, unde animi, quaerat aliquam voluptatum consectetur voluptate eaque corrupti iusto possimus eius ratione blanditiis. Mollitia?</p>
+                   {/* <div className="container_botao">
+                        <a className="buttonComprar" href="#">Comprar agora</a>
+                   </div> */}
+
+                   <div className="container_botao">
+                        <a className="buttonAdicionar" href="#">Adicionar ao carrinho</a>
+                   </div>
+                   
                </div>
            </div>
            <Footer />

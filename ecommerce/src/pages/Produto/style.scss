@@ -1,0 +1,67 @@
+.container_produto {
+  margin: 0 10px;
+}
+
+.container_imagem {
+  // border: 1px gray solid;
+}
+
+.container_descricao {
+  // border: 1px gray solid;
+}
+
+.container_precoDesconto {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px;
+  font-size: 25px;
+  
+}
+
+.dozeVezes {
+  margin-left: 30px;
+  font-size: 16px;
+  color: green;
+}
+
+.freteGratis {
+  margin-left: 30px;
+  font-size: 14px;
+  color: green;
+}
+
+.descricao {
+  margin: 0 30px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-size: 13px;
+}
+
+.container_botao {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonComprar {
+  color: white;
+  background-color: blue;
+  padding: 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+
+.buttonAdicionar {
+  color: white;
+  background-color: blue;
+  padding: 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
