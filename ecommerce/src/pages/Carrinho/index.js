@@ -24,7 +24,7 @@ const Carrinho = () => {
         <SearchBar />
         <section>
             {/* ITEM 01 */}
-            <div className="card mb-3 " >
+            <div className="card mb-3" >
                 <div className="row g-0 div-item">
                     <div className="col-md-4 mb-3 justify-content-center d-flex">
                         <img src="https://http2.mlstatic.com/D_NQ_NP_924025-MLB47833480720_102021-O.webp" className="img-card img-fluid rounded-start" alt="img"/>
@@ -40,9 +40,9 @@ const Carrinho = () => {
                     </div>
                     <div className="col-md-3 texto">
                         <div className="text-card">
-                            <h5>Pen Drive</h5>
-                            <h6 className="">R$ 50,00</h6>
-                            <h6 className="card-text"><small className="text-muted">Frete Grátis</small></h6>                         
+                            <p className="titulo-prod">Pen Drive</p>
+                            <p className="valor">R$ 50,00</p>
+                            <p className="card-text"><small className="text-muted">Frete Grátis</small></p>                         
                         </div>                                                                      
                     </div>
                     <div className="col-md-1 div-trash mb-3">
@@ -69,10 +69,10 @@ const Carrinho = () => {
                     </div>
                     <div className="col-md-3 texto">
                         <div className="text-card">
-                            <h5>Pen Drive</h5>
-                            <h6 className="">R$ 50,00</h6>
-                            <h6 className="card-text"><small className="text-muted">Frete Grátis</small></h6>                         
-                        </div>                                                                      
+                            <p className="titulo-prod">Pen Drive</p>
+                            <p className="valor">R$ 50,00</p>
+                            <p className="card-text"><small className="text-muted">Frete Grátis</small></p>                         
+                        </div>                                                                                     
                     </div>
                     <div className="col-md-1 div-trash mb-3">
                         <button className="buttons-icons" >
@@ -86,11 +86,11 @@ const Carrinho = () => {
         </section>
         {/* Valor total da  compra */}
         <div className="div-total">
-            <div>
-                <h4>Valor total: R$ 100,00</h4>
+            <div className="div-total-valor">
+                <p>Valor total: R$ 100,00</p>
             </div>
-            <div>
-                <h5>Até em 10x sem juros</h5>
+            <div  className="div-total-x">
+                <p>Até em 10x sem juros</p>
             </div>          
         </div>
 

@@ -1,17 +1,27 @@
 .img-card {
-    max-width:120px !important;
+    max-width:12rem !important;
     
 
 }
 .input-quant {    
-    max-width: 70px;
+    max-width: 7rem;
     text-align: center;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .texto {
     display: flex !important;
     justify-content: center !important;
+    .text-card {
+        font-size: 2.0rem;
+        .titulo-prod {
+            font-size: 2.2rem;
+            font-weight: 500;
+        }
+        .valor {
+            font-weight: 500;
+        }
+    }
 }
 
 .buttons-icons {
@@ -26,7 +36,7 @@
 .div-trash {    
     display: flex;    
     justify-content: end !important;
-    margin-right: 30px;
+    margin-right: 3rem;
     
 
 }
@@ -35,8 +45,19 @@
     display: flex; 
     align-items: flex-end;
     flex-direction:column;
-    padding-right: 65px;
+    padding-right: 6.5rem;
+    border-bottom: 1px solid #dee2e6;
+    
+    
     gap: 1rem;
+    .div-total-valor {
+        font-size: 2.3rem;
+        font-weight: 500;
+
+    }
+    .div-total-x {
+        font-size: 2rem;
+    }
        
     
 }
@@ -46,7 +67,7 @@
     display:flex;     
     justify-content: space-between;
     align-items: center;
-    margin: 0 20px 0 !important;
+    margin: 0 2rem 0 !important;
     
     
 }
@@ -56,12 +77,14 @@
     display: flex;       
     align-items: flex-end;
     flex-direction: column;
-    padding-right: 65px;
-    margin-bottom: 100px;
-    margin-top: 30px;
+    padding-right: 6.5rem;
+    margin-bottom: 10rem;
+    margin-top: 3rem;
     gap: 1rem;
 
     .btn-car {
-        width: 190px;
+        width: 19rem;
+        font-size: 1.5rem;
+        padding: 0.9rem;
     }
 }
