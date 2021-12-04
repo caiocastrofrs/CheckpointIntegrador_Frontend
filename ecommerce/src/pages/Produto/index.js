@@ -3,6 +3,7 @@ import './style.scss';
 import { Helmet } from 'react-helmet'
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+// import CardProduto from '../../components/CardProduto';
 
 
 
@@ -40,8 +41,8 @@ const Produto = () => {
                </div>
            </div>
 
-           <p>Quem viu esse produto também comprou</p>
-
+           <p className="quemViu">Quem viu esse produto também comprou...</p>
+            {/* <CardProduto/> */}
 
            <Footer />
         </>

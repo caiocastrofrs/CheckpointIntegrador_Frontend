@@ -11,13 +11,13 @@
   width: 100%;
 }
 
-.container_imagem {
-  // border: 1px gray solid;
-}
+// .container_imagem {
+//   border: 1px gray solid;
+// }
 
-.container_descricao {
-  // border: 1px gray solid;
-}
+// .container_descricao {
+//   border: 1px gray solid;
+// }
 
 .container_precoDesconto {
   display: flex;
@@ -79,6 +79,12 @@
 }
 
 
+.quemViu {
+  margin: 30px 45px;
+  font-size: 16px;
+}
+
+
 // @media (min-width:426px) {
 //   .container_produto {
 //     display: flex;
@@ -114,15 +120,15 @@
 @media (min-width:768px) {
   .container_produto {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: 0 50px;
   }
 
   .container_imagem {
-    width: 800px;
-    height: 600px;
+    width: 400px;
+    height: 550px;
     text-align: center;
-    border: 1px solid black;
+    // border: 1px solid black;
   }
 
   .imagem {
@@ -131,10 +137,10 @@
   }
 
   .container_descricao {
-    width: 800px;
-    height: 600px;
-    border: 1px solid black;
-    margin: 0px 50px;
+    width: 400px;
+    height: 550px;
+    // border: 1px solid black;
+    // margin: 0px 50px;
     padding: 30px;
     
   }
@@ -159,7 +165,7 @@
   }
 
   .buttonAdicionar {
-    
+    margin-top: 30px;
   }
 }
 
