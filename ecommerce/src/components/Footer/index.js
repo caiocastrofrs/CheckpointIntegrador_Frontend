@@ -11,17 +11,17 @@ const Footer = () => {
         </div>
         <ul className="nav justify-content-center border-bottom pb-3 mb-3">
           <li className="nav-item">
-            <Link to="/" className="nav-link px-2 text-muted">
+            <Link to="/produto/produtos" className="nav-link px-2 text-muted">
               Produtos
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="#" className="nav-link px-2 text-muted">
+            <Link to="/carrinho" className="nav-link px-2 text-muted">
               Carrinho
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="#" className="nav-link px-2 text-muted">
+            <Link to="/sobre" className="nav-link px-2 text-muted">
               Sobre nós
             </Link>
           </li>
