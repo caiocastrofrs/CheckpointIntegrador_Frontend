@@ -35,7 +35,7 @@
 
 .div-trash {    
     display: flex;    
-    justify-content: end !important;
+    justify-content: flex-end !important;
     margin-right: 3rem;
     
 
@@ -66,8 +66,10 @@
 .div-item {
     display:flex;     
     justify-content: space-between;
-    align-items: center;
-    margin: 0 2rem 0 !important;
+    align-items: center;    
+    margin: 2rem 0 !important;
+    
+
     
     
 }

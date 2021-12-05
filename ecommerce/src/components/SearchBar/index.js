@@ -8,6 +8,7 @@ const SearchBar = () => {
     }
     return(
     <>
+    {/* PESQUISA POR titulo */}
     <Formik initialValues={{ nomeUsuario: "" }} onSubmit={handleSubmit}>
         <Form className="form m-auto">
           <Field
