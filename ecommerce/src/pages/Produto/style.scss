@@ -81,6 +81,7 @@
 
 .quemViu {
   margin: 30px 45px;
+  margin-left: 30px;
   font-size: 16px;
 }
 
@@ -166,6 +167,20 @@
 
   .buttonAdicionar {
     margin-top: 30px;
+  }
+
+  .quemViu {
+    // margin: 30px 20px;
+    margin-left: 280px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width:1440px) {
+  .quemViu {
+    
+    margin-left: 535px;
+    
   }
 }
 
