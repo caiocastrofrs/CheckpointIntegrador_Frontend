@@ -1,5 +1,5 @@
 import './style.scss';
-import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 import React from 'react'
 
