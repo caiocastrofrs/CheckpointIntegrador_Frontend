@@ -9,6 +9,7 @@ import CardProduto from '../../components/CardProduto';
 import { Container } from 'react-bootstrap';
 import Footer from '../../components/Footer/index';
 import { Paginacao } from '../../components/Paginacao';
+// import { isString } from 'formik';
 
 
 const Produtos = () => {
@@ -354,23 +355,21 @@ const Produtos = () => {
 
   const indexInicial = paginaAtual * itensPorPagina;
   const indexFinal = indexInicial + itensPorPagina;
-  const qttExibir = produtos.slice(indexInicial, indexFinal);
+  const qttExibir = prodts.slice(indexInicial, indexFinal);
 
   useEffect(() => {
     setPaginaAtual(0)
   }, [itensPorPagina])
-
+  
   useEffect(() => {
     if(text === '') {
-      console.log(text);
-      setProdts(...produtos);
-      console.log(prodts);
-        return;
-      }
+      setProdts(produtos);
+    } else {
       const filtroProduto = prodts.filter(({titulo}) => (titulo.toLowerCase()).includes(text));
       setProdts(filtroProduto)
-  }, [text]);
-  
+    }
+  }, [text])
+
 
   return (
     <>

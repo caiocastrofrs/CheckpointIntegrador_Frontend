@@ -41,7 +41,7 @@ export const BoxFilterCategoria = () => {
                             <Form className="fomulario">
                                 <div role="group" >
                                     {
-                                        categorias.map(categoria => {
+                                        categorias && categorias.map(categoria => {
                                             return (
                                                 <label>
                                                     <Field style={{marginLeft: '5px'}} type="checkbox" name="checked" value={categoria} />

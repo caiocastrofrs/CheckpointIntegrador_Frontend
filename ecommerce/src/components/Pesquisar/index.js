@@ -3,9 +3,10 @@ import './style.scss';
 import { FaSearch } from 'react-icons/fa';
 
 const Pesquisa = ({value, onChange}) => {
-
-    function handleChange({target}) {
-      onChange(target.value)
+    
+  
+  function handleChange(e) {
+      onChange(e.target.value);
     }
 
     return(
@@ -14,7 +15,7 @@ const Pesquisa = ({value, onChange}) => {
           <input
             placeholder="Busque um produto"
             required
-            type="search"
+            type="text"
             name="nomeUsuario"
             id="nomeUsuario"
             value={value}
