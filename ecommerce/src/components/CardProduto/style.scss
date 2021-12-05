@@ -1,7 +1,26 @@
+.card-produto {
+    &:hover {
+        cursor: pointer;
+        transition: ease-out 0.2s;
+        box-shadow: -1px 2px 17px  rgba(0, 0, 0, 0.479);
+        -webkit-box-shadow: -1px 2px 17px  rgba(0, 0, 0, 0.479);
+        -moz-box-shadow: -1px 2px 17px  rgba(0, 0, 0, 0.479);
+    }
+}
+
 .desconto-produto {
     position: absolute;
     right: 1.5rem;
     top: 68%;
     color: rgb(30, 165, 120);
     font-size: 16px;
+}
+
+.imagem-box-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65%;
+    border: 1px rgba(29, 28, 28, 0.192) solid;
+    border-radius: 3px;
 }

@@ -1,5 +1,5 @@
 .fomulario {
-    width: 15rem;
+    width: 20rem;
     display: flex;
     justify-content: center;
     flex-flow: column wrap;
@@ -9,12 +9,14 @@
         display: flex;
         align-items: center;
         width: 100%;
-        font-size: 15px;
+        font-size: 20px;
     }
 
     button {
+        height: 27px;
         margin: 5px;
         border-radius: 5px;
+        font-size: 15px;
     }
 }
 
@@ -23,3 +25,4 @@
     right: -50%;
     transform: translate(-50%);
 }
+

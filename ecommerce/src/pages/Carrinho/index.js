@@ -1,11 +1,11 @@
 import './style.scss';
 import Header from "../../components/Header";
-import SearchBar from '../../components/SearchBar';
 import Footer from "../../components/Footer";
 import { Helmet } from 'react-helmet';
 import{ Button } from 'react-bootstrap';
 import { BsFillTrashFill } from 'react-icons/bs';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 
 
@@ -20,8 +20,7 @@ const Carrinho = () => {
         <Helmet>
         <title>Bodega | Carrinho </title>
         </Helmet>
-        <Header />
-        <SearchBar />
+        <Header />        
         <section>
             {/* ITEM 01 */}
             <div className="card mb-3" >
@@ -97,7 +96,9 @@ const Carrinho = () => {
         {/* Botões de finalizar compra */}
         <div className="buttons-compra">
             <div>
-                <Button className="position-static btn-car" type="submit" variant="primary">Continuar Comprando</Button>{''}
+                 <Link to="/produtos">
+                    <Button className="position-static btn-car" type="submit" variant="primary">Continuar Comprando</Button>{''}
+                </Link>                
             </div>
             <div>
                 <Button className="position-static btn-car" type="submit" variant="secondary">Finalizar Compra</Button>{''}

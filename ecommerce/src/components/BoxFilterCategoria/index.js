@@ -11,8 +11,8 @@ export const BoxFilterCategoria = () => {
         'Bebê',
         'Games',
         'Esporte',
-        'Informárica',
-        'Eletronicos',
+        'Informática',
+        'Eletrônicos',
         'Eletrodomésticos'
     ]
 
@@ -41,11 +41,11 @@ export const BoxFilterCategoria = () => {
                             <Form className="fomulario">
                                 <div role="group" >
                                     {
-                                        categorias.map(categoria => {
+                                        categorias && categorias.map(categoria => {
                                             return (
                                                 <label>
-                                                    <Field type="checkbox" name="checked" value={categoria} className="imput-categoria" />
-                                                    {categoria}
+                                                    <Field style={{marginLeft: '5px'}} type="checkbox" name="checked" value={categoria} />
+                                                    <span style={{marginLeft: '5px'}}>{categoria}</span>
                                                 </label>
                                             )
                                         })}

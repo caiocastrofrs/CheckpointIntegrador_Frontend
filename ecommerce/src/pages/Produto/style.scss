@@ -7,14 +7,17 @@
   margin: 0 10px;
 }
 
-.container_imagem {
-  // border: 1px gray solid;
-  max-width: 500px;
+.imagem {
+  width: 100%;
 }
 
-.container_descricao {
-  // border: 1px gray solid;
-}
+// .container_imagem {
+//   border: 1px gray solid;
+// }
+
+// .container_descricao {
+//   border: 1px gray solid;
+// }
 
 .container_precoDesconto {
   display: flex;
@@ -76,34 +79,40 @@
 }
 
 
-@media (min-width:426px) {
-  .container_produto {
-    display: flex;
-    justify-content: center;
-    margin: 0 50px;
-  }
-
-  .container_imagem {
-    width: 800px;
-    height: 800px;
-    text-align: center;
-    // border: 1px solid black;
-  }
-
-  .imagem {
-    width: 700px;
-    height: 500px;
-  }
-
-  .container_descricao {
-    width: 2000px;
-    height: 500px;
-    // border: 1px solid black;
-    margin: 0px 50px;
-    padding: 30px;
-    
-  }
+.quemViu {
+  margin: 30px 45px;
+  font-size: 16px;
 }
+
+
+// @media (min-width:426px) {
+//   .container_produto {
+//     display: flex;
+//     justify-content: center;
+//     margin: 0 50px;
+//   }
+
+//   .container_imagem {
+//     width: 800px;
+//     height: 800px;
+//     text-align: center;
+//     border: 1px solid black;
+//   }
+
+//   .imagem {
+//     width: 100%;
+//     height: 500px;
+//   }
+
+//   .container_descricao {
+//     width: 2000px;
+//     height: 500px;
+//     border: 1px solid black;
+//     margin: 0px 50px;
+//     padding: 30px;
+    
+//   }
+// }
 
 
 
@@ -116,8 +125,8 @@
   }
 
   .container_imagem {
-    width: 2000px;
-    height: 800px;
+    width: 400px;
+    height: 550px;
     text-align: center;
     // border: 1px solid black;
   }
@@ -128,12 +137,19 @@
   }
 
   .container_descricao {
-    width: 2000px;
-    height: 500px;
+    width: 400px;
+    height: 550px;
     // border: 1px solid black;
-    margin: 0px 50px;
+    // margin: 0px 50px;
     padding: 30px;
     
+  }
+
+  .descricao {
+    // margin: 0 30px;
+    // line-height: 1.5;
+    // margin-bottom: 30px;
+    font-size: 16px;
   }
 
   .container_precoDesconto {
@@ -141,15 +157,15 @@
   }
 
   .dozeVezes {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   } 
 
   .freteGratis {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .buttonAdicionar {
-    margin-top: 60px;
+    margin-top: 30px;
   }
 }
 

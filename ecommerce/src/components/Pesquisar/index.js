@@ -1,29 +1,31 @@
 import './style.scss';
-import { Formik, Form, Field } from 'formik';
+// import { Formik, Form, Field } from 'formik';
 import { FaSearch } from 'react-icons/fa';
 
-const SearchBar = () => {
-    const handleSubmit = ({nomeUsuario}) => {
-        console.log(nomeUsuario);
+const Pesquisa = ({value, onChange}) => {
+    
+  
+  function handleChange(e) {
+      onChange(e.target.value);
     }
+
     return(
     <>
-    {/* PESQUISA POR titulo */}
-    <Formik initialValues={{ nomeUsuario: "" }} onSubmit={handleSubmit}>
-        <Form className="form m-auto">
-          <Field
+        <form className="form m-auto">
+          <input
             placeholder="Busque um produto"
             required
             type="text"
             name="nomeUsuario"
             id="nomeUsuario"
+            value={value}
+            onChange={handleChange}
             className="form-control my-3"
           />
           <button type="submit" className="btn"><FaSearch size="24" className="lupa" type="submit"/></button>
-        </Form>
-      </Formik>
+        </form>
     </>
     );
 }
 
-export default SearchBar;
+export default Pesquisa;
