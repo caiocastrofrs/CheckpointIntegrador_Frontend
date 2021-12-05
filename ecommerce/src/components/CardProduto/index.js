@@ -18,7 +18,7 @@ const CardProduto = ({ produto }) => {
             padding: '0.7rem',
             backgroundColor: 'rgb(236, 227, 220)',
         }}
-            className="card-produto m-auto">
+            className="card-produto">
             <div className="imagem-box-card">
                 <Card.Img style={{
                     maxWidth: '210px',
