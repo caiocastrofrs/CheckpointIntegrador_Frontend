@@ -1,6 +1,5 @@
 import './style.scss';
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
-
 import React from 'react'
 
 const CardProduto = ({ produto }) => {
@@ -12,7 +11,7 @@ const CardProduto = ({ produto }) => {
     }
 
     return (
-        <Card style={{ width: '25rem', margin: '1rem', padding:'0.7rem' }}>
+        <Card className="m-auto" style={{ width: '25rem', margin: '1rem', padding:'0.7rem' }}>
             <Card.Img variant="top" src={produto.imagem} />
             <Card.Body>
                 <Card.Title style={{ fontSize: '25px'}}>{(produto.preco).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</Card.Title>
