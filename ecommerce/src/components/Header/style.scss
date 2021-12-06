@@ -28,7 +28,7 @@
         text-decoration: none;
         color: $primary-color-dark;
         &:hover {
-            color: $secondary-color;
+            color: $secondary-color-dark;
         }
         &__div-carrinho {
             position: relative;
@@ -143,4 +143,8 @@
             font-size: 2.2rem;
         }
     }
+}
+
+#header {
+    background-color: $secondary-color-light !important;
 }
