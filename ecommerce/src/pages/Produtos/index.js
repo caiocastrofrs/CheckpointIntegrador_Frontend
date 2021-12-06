@@ -358,10 +358,12 @@ const Produtos = () => {
   const indexFinal = indexInicial + itensPorPagina;
   const qttExibir = produtos.slice(indexInicial, indexFinal);
 
+  console.log(checkd);
+
   const loadData = useCallback(() => {
     (async function loadDataa() {
       try {
-        const response = await api.get( categoria === '' ?  categoria : `/produtos${checkd}`);
+        const response = await api.get( categoria === null ?  `/produtos/categoria/${categoria}` : `/produtos${checkd}`);
         setProdutos(response.data);
       } catch (error) {
         alert("Veridique sua conexão com a internet");
@@ -381,9 +383,6 @@ const Produtos = () => {
   useEffect(() => {
     console.log(checkd)
   }, [checkd])
-
-  console.log("categoria")
-  console.log(categoria)
 
   return (
     <>
