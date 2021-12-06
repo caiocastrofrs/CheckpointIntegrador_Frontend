@@ -46,7 +46,7 @@ const CarouselComponent = () => {
     },
   ];
 
-  const produtos2 = [
+   const produtos2 = [
     {
       id: 29,
       titulo: "Memória XPG Spectrix D45G, RGB, 8GB, 3600MHz",
@@ -86,7 +86,7 @@ const CarouselComponent = () => {
         nomeCategoria: "INFORMATICA",
       },
     },
-  ];
+  ]; 
   const checkItemIndex = (index) => {
     if (index === 0) {
       return "";
@@ -100,10 +100,10 @@ const CarouselComponent = () => {
     <>
       <Carousel
         variant="dark"
-        className="my-5 col-10 col-md-12 col-lg-10 m-auto"
+        className="my-5 col-10 col-sm-12 col-md-12 col-lg-10 col-lx-2 m-auto"
       >
         <Carousel.Item>
-          <Col col={{ span: 12, offset: 4 }} md={{ span: 10, offset: 0 }} lg={{ span: 12, offset: 0 }} xl={{ span: 6, offset: 3 }}>
+          <Col col={{ span: 12, offset: 4 }} sm={{ span: 12, offset: 0 }}  md={{ span: 12, offset: 0 }} lg={{ span: 10, offset: 0 }} xl={{ span: 6, offset: 3 }}>
             <Row>
               {produtos1 &&
                 produtos1.map((produto, index) => {
@@ -120,8 +120,8 @@ const CarouselComponent = () => {
             </Row>
           </Col>
         </Carousel.Item>
-        {/* <Carousel.Item>
-        <Col md={{ span: 6, offset: 3 }}>
+        <Carousel.Item>
+          <Col col={{ span: 12, offset: 4 }} sm={{ span: 12, offset: 0 }}  md={{ span: 12, offset: 0 }} lg={{ span: 10, offset: 0 }} xl={{ span: 6, offset: 3 }}>
             <Row>
               {produtos2 &&
                 produtos2.map((produto, index) => {
@@ -137,7 +137,7 @@ const CarouselComponent = () => {
                 })}
             </Row>
           </Col>
-        </Carousel.Item> */}
+        </Carousel.Item>
       </Carousel>
     </>
   );
