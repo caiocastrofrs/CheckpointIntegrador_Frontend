@@ -87,45 +87,57 @@ const CarouselComponent = () => {
       },
     },
   ];
-  const checkItemIndex = (index)  => {
-    if(index === 0) {
+  const checkItemIndex = (index) => {
+    if (index === 0) {
       return "";
-    } else if ( index === 1) {
-      return "d-none d-sm-block"
+    } else if (index === 1) {
+      return "d-none d-sm-block";
     } else if (index === 2) {
-      return "d-none d-md-block"
+      return "d-none d-md-block";
     }
-
-  }
+  };
   return (
     <>
-      <Carousel variant="dark" className="my-5 col-10 col-md-12 col-lg-7 m-auto">
+      <Carousel
+        variant="dark"
+        className="my-5 col-10 col-md-12 col-lg-10 m-auto"
+      >
         <Carousel.Item>
-          <Row>
-            {produtos1 &&
-              produtos1.map((produto, index) => {
-                return (
-                  <Col md={4} sm={6} className={checkItemIndex(index)}>
-                    <CardProduto key={produto.id} produto={produto} />
-                  </Col>
-                );
-              })}
-          </Row>
+          <Col col={{ span: 12, offset: 4 }} md={{ span: 10, offset: 0 }} lg={{ span: 12, offset: 0 }} xl={{ span: 6, offset: 3 }}>
+            <Row>
+              {produtos1 &&
+                produtos1.map((produto, index) => {
+                  return (
+                    <Col md={4} sm={6} className={checkItemIndex(index)}>
+                      <CardProduto
+                        key={produto.id}
+                        produto={produto}
+                        className="center-item"
+                      />
+                    </Col>
+                  );
+                })}
+            </Row>
+          </Col>
         </Carousel.Item>
-        <Carousel.Item>
-          <Row>
-          {produtos2 &&
-              produtos2.map((produto, index) => {
-                console.log(index);
-                return (
-                  
-                  <Col md={4} sm={6} className={checkItemIndex(index)}>
-                    <CardProduto key={produto.id} produto={produto} />
-                  </Col>
-                );
-              })}
-          </Row>
-        </Carousel.Item>
+        {/* <Carousel.Item>
+        <Col md={{ span: 6, offset: 3 }}>
+            <Row>
+              {produtos2 &&
+                produtos2.map((produto, index) => {
+                  return (
+                    <Col md={4} sm={6} className={checkItemIndex(index)}>
+                      <CardProduto
+                        key={produto.id}
+                        produto={produto}
+                        className="center-item"
+                      />
+                    </Col>
+                  );
+                })}
+            </Row>
+          </Col>
+        </Carousel.Item> */}
       </Carousel>
     </>
   );
