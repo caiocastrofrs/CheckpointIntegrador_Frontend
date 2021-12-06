@@ -10,9 +10,11 @@ import CardProduto from '../../components/CardProduto';
 import { Container } from 'react-bootstrap';
 import Footer from '../../components/Footer/index';
 import { Paginacao } from '../../components/Paginacao';
+import { useParams } from 'react-router';
 
 
 const Produtos = () => {
+  const { categoria } = useParams();
 
   // const produtos = [
   //   {
@@ -350,8 +352,6 @@ const Produtos = () => {
   const [itensPorPagina, setitensPorPagina] = useState(10);
   const [paginaAtual, setPaginaAtual] = useState(0);
   const [produtos, setProdutos] = useState([]);
-  // const [prodts, setProdts] = useState([]);
-  // const [text, setText] = useState();
   const [checkd, setCecked] = useState('');
 
   const indexInicial = paginaAtual * itensPorPagina;
@@ -361,49 +361,40 @@ const Produtos = () => {
   const loadData = useCallback(() => {
     (async function loadDataa() {
       try {
-        const response = await api.get(`/produtos`);
+        const response = await api.get( categoria === '' ?  categoria : `/produtos${checkd}`);
         setProdutos(response.data);
-      } catch(error) {
+      } catch (error) {
         alert("Veridique sua conexão com a internet");
       }
     })()
-  },[]);
+  }, [checkd]);
 
   useEffect(() => {
     loadData();
-  },[loadData])
+  }, [loadData])
 
 
   useEffect(() => {
     setPaginaAtual(0)
   }, [itensPorPagina])
-  
-  // useEffect(() => {
-  //   if(text === '') {
-  //     setProdts(produtos);
-  //     console.log(prodts)
-  //   } else {
-  //     const filtroProduto = prodts.filter(({titulo}) => (titulo.toLowerCase()).includes(text));
-  //     setProdts(filtroProduto)
-  //   }
-  // }, [text])
 
   useEffect(() => {
     console.log(checkd)
   }, [checkd])
 
+  console.log("categoria")
+  console.log(categoria)
+
   return (
     <>
       <Helmet>
-        <title>Bodega | Produtos</title>
+        <title>Bodega | {checkd === '' ? 'Produtos' 
+            : (produtos[0].categoria.nomeCategoria)}
+
+        </title>
       </Helmet>
       <Header />
       <main className="container-produtos m-auto col-xl-9">
-
-        {/* <Pesquisar
-          value={text}
-          onChange={(string) => setText(string)}
-        /> */}
 
         <BoxFilterCategoria
           setCecked={setCecked}
