@@ -1,7 +1,7 @@
 import "./style.scss";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import SearchBar from '../../components/SearchBar';
+/* import SearchBar from '../../components/SearchBar'; */
 import CarouselComponent from '../../components/Carousel';
 import Categorias from '../../components/Categorias';
 // import { useState, useEffect } from 'react';
@@ -18,7 +18,7 @@ const Home = () => {
         <title>Bodega | Home</title>
       </Helmet>
       <Header />
-      <SearchBar />
+{/*       <SearchBar /> */}
       <CarouselComponent />
       <Categorias />
       <Footer />
