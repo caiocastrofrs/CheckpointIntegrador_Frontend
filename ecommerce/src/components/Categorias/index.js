@@ -5,9 +5,9 @@ import { FaBabyCarriage } from "react-icons/fa";
 import { MdSportsSoccer } from "react-icons/md";
 import { CgGames } from "react-icons/cg";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
+import { Link } from "react-router-dom";
+
 const Categorias = () => {
-  
-  
   const categorias = [
     "ELETRODOMESTICOS",
     "ELETRONICOS",
@@ -24,8 +24,8 @@ const Categorias = () => {
     MdSportsSoccer,
     CgGames,
     HiOutlineDesktopComputer,
-  ]
-  
+  ];
+
   return (
     <>
       <section className="section-categorias">
@@ -34,12 +34,15 @@ const Categorias = () => {
           {categorias.map((categoria, index) => {
             let Icon = icons[index];
             return (
-              <div className="section-categorias__container__categoria col-5 col-sm-3 col-md-5 col-lg-4 col-xl-4">
+              <Link
+                className="section-categorias__container__categoria col-12 col-sm-5 col-md-5 col-lg-4 col-xl-4"
+                to={`/produtos/categoria/${categorias[index]}`}
+              >
                 <Icon className="section-categorias__container__categoria__icon" />
                 <span className="section-categorias__container__categoria__titulo">
                   {categoria}
                 </span>
-              </div>
+              </Link>
             );
           })}
         </div>
