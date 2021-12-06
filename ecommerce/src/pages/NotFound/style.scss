@@ -1,0 +1,24 @@
+@import '../../Sass/abstracts/variables.scss'; 
+
+div {
+    padding-top: 18rem;
+    text-align: center;
+
+}
+
+h1 {
+    font-size: 4rem !important;
+}
+
+h2 {
+    font-size: 2.5rem !important;
+}
+
+.link {
+    font-size: 2rem;
+    text-decoration:none;
+    color: $primary-color-dark;
+    &:hover{
+        color:$secondary-color !important;
+    }
+}
