@@ -1,5 +1,4 @@
 import './style.scss';
-// import { Formik, Form, Field } from 'formik';
 import { FaSearch } from 'react-icons/fa';
 
 const Pesquisa = ({value, onChange}) => {

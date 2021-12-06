@@ -10,6 +10,10 @@ const CardProduto = ({ produto }) => {
         return (produto.preco / parcela).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     }
 
+    function capturarId() {
+        console.log(produto.id)
+    }
+
     return (
         <Card style={{
             width: '25rem',
@@ -18,7 +22,9 @@ const CardProduto = ({ produto }) => {
             padding: '0.7rem',
             backgroundColor: 'rgb(236, 227, 220)',
         }}
-            className="card-produto">
+        onClick={capturarId}
+        className="card-produto"
+        >
             <div className="imagem-box-card">
                 <Card.Img style={{
                     maxWidth: '210px',
