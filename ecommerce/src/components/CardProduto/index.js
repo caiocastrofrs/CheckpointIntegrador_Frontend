@@ -20,7 +20,6 @@ const CardProduto = ({ produto }) => {
             height: '35rem',
             margin: '1rem',
             padding: '0.7rem',
-            backgroundColor: 'rgb(236, 227, 220)',
         }}
         onClick={capturarId}
         className="card-produto"

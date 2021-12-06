@@ -1,10 +1,13 @@
+@import '../../Sass/abstracts/variables.scss';
+
 .card-produto {
+    background-color: rgba($secondary-color-light, .555) !important;
     &:hover {
         cursor: pointer;
         transition: ease-out 0.2s;
-        box-shadow: -1px 2px 17px  rgba(0, 0, 0, 0.479);
-        -webkit-box-shadow: -1px 2px 17px  rgba(0, 0, 0, 0.479);
-        -moz-box-shadow: -1px 2px 17px  rgba(0, 0, 0, 0.479);
+        box-shadow: -1px 2px .9rem  rgba(0, 0, 0, 0.479);
+        -webkit-box-shadow: -1px 2px .9rem  rgba(0, 0, 0, 0.479);
+        -moz-box-shadow: -1px 2px .9rem  rgba(0, 0, 0, 0.479);
     }
 }
 
