@@ -5,9 +5,9 @@ const NotFound = () => {
 
     return(
         <>
-        <div>
-            <h1>Ops!</h1>
-            <h2>Não conseguimos encontrar a página que você está procurando</h2>
+        <div className="div-notfound">
+            <h1 className="h1-notfound">Ops!</h1>
+            <h2 className="h2-notfound">Não conseguimos encontrar a página que você está procurando</h2>
             <Link className="link" to="/">Voltar para página princinal -></Link>
         </div>
         
