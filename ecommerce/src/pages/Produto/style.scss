@@ -22,7 +22,7 @@
 .container_precoDesconto {
   display: flex;
   justify-content: space-between;
-  margin: 0 30px;
+  margin: 0 10px;
   font-size: 25px;
   
 }
@@ -32,19 +32,19 @@
 }
 
 .dozeVezes {
-  margin-left: 30px;
+  margin-left: 10px;
   font-size: 16px;
   color: green;
 }
 
 .freteGratis {
-  margin-left: 30px;
+  margin-left: 10px;
   font-size: 14px;
   color: green;
 }
 
 .descricao {
-  margin: 0 30px;
+  margin: 0 10px;
   line-height: 1.5;
   margin-bottom: 30px;
   font-size: 13px;
@@ -57,20 +57,20 @@
 
 .buttonComprar {
   color: white;
-  background-color: blue;
-  padding: 20px;
+  background-color: #3483fa;
+  padding: 20px 80px;
   border-radius: 4px;
   font-size: 14px;
   text-decoration: none;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   text-transform: uppercase;
 }
 
 
 .buttonAdicionar {
-  color: white;
-  background-color: blue;
-  padding: 20px;
+  color: #3483fa;
+  background-color: #3483fa3a;
+  padding: 20px 54px;
   border-radius: 4px;
   font-size: 14px;
   text-decoration: none;
@@ -81,6 +81,7 @@
 
 .quemViu {
   margin: 30px 45px;
+  margin-left: 30px;
   font-size: 16px;
 }
 
@@ -145,27 +146,45 @@
     
   }
 
+   .container_precoDesconto {
+    margin-bottom: 20px;
+    margin: 0 30px;
+  }
+
+  .dozeVezes {
+    margin-bottom: 10px;
+    margin-left: 30px;
+  } 
+
+  .freteGratis {
+    margin-bottom: 10px;
+    margin-left: 30px;
+  }
+
   .descricao {
     // margin: 0 30px;
     // line-height: 1.5;
     // margin-bottom: 30px;
     font-size: 16px;
-  }
-
-  .container_precoDesconto {
-    margin-bottom: 20px;
-  }
-
-  .dozeVezes {
-    margin-bottom: 10px;
-  } 
-
-  .freteGratis {
-    margin-bottom: 10px;
+    margin-left: 30px;
   }
 
   .buttonAdicionar {
-    margin-top: 30px;
+    margin-top: 10px;
+  }
+
+  .quemViu {
+    // margin: 30px 20px;
+    margin-left: 280px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width:1440px) {
+  .quemViu {
+    
+    margin-left: 535px;
+    
   }
 }
 

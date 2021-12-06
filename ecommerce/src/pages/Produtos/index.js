@@ -398,7 +398,7 @@ const Produtos = () => {
         <title>Bodega | Produtos</title>
       </Helmet>
       <Header />
-      <main className="container-produtos">
+      <main className="container-produtos m-auto col-xl-9">
 
         {/* <Pesquisar
           value={text}
