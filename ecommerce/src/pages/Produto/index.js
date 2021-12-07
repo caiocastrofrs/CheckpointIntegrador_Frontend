@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './style.scss';
 import { Helmet } from 'react-helmet'
-import { Container } from 'react-bootstrap';
-import { Row } from 'react-bootstrap';
 import CardProduto from '../../components/CardProduto';
 import { useParams } from 'react-router';
 import { useState, useEffect, useCallback } from 'react';
@@ -72,7 +70,6 @@ const Produto = () => {
 
             <p className="quemViu">Quem viu esse produto também comprou...</p>
             <div className="conatiner-sugeridos">
-                {/* <Row className="linha-produtos"> */}
                     {
                         produtosCatg.map((item, index) => {
                             var itemOpaco = 'item-opaco'
@@ -87,8 +84,7 @@ const Produto = () => {
                                 />
                                 </div>
                             )}
-                    )}
-                {/* </Row> */}
+                    )} 
             </div>
         </>
     );
