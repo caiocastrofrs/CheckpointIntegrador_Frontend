@@ -49,10 +49,13 @@
 }
 
 .imagem {
-  width: 100%;
+  display: inline-block;
+  width: 200px;
 }
 
 // .container_imagem {
+//   max-width: 400px;
+//   max-height: 550px;
 //   border: 1px gray solid;
 // }
 

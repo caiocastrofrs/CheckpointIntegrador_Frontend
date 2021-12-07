@@ -32,7 +32,7 @@ const Produto = () => {
 
     useEffect(() => {
         loadData();
-        console.log(produto.preco)
+        // console.log(produto.preco)
     }, [loadData])
 
     const parcela = 12;

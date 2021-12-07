@@ -1,40 +1,8 @@
 @import '../../Sass/abstracts/variables.scss'; 
 @import '../../Sass/abstracts/mixins.scss';
 
-// .div-notfound {
-//     margin: 0 auto;
-//     text-align: center;
-// }
-
-// .h1-notfound {
-//     font-size: 4rem !important;
-// }
-
-// .h2-notfound {
-//     font-size: 2.5rem !important;
-// }
-
-// .link {
-//     font-size: 2rem;
-//     text-decoration:none;
-//     color: $primary-color-dark;
-//     &:hover{
-//         color:$secondary-color !important;
-//     }
-// }
-
-
-// .anomacao-not-found {
-//     width: 100vw;
-//     height: 100vh;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-direction: column;
-//     border: 1px red solid;
-// }
-
-.titulo-not-found {
+.div-notfound {
+    
     position: relative;
     text-align: center;
     top: -17rem;
@@ -45,5 +13,47 @@
 
     @include respond(small-phone) {
         top: -11rem;
+    }
+}
+
+.h1-notfound {
+    font-size: 4rem !important;
+}
+
+.h2-notfound {
+    font-size: 2.5rem !important;
+}
+
+.link {
+    font-size: 2rem;
+    text-decoration:none;
+    color: $primary-color-dark;
+    &:hover{
+        color:$secondary-color !important;
+    }
+}
+
+
+.animacao-not-found {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include respond(desktop) {
+        height: 61vh;
+    }
+    
+    @include respond(phone) {
+        height: 62vh;
+    }
+    
+    @include respond(tab-port) {
+        height: 70vh;
+    }
+
+    @include respond(small-phone) {
+        height: 62vh;
     }
 }
