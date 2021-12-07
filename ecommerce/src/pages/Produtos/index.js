@@ -3,7 +3,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet';
 import api from '../../service/api'
 import Header from '../../components/Header';
-// import Pesquisar from '../../components/Pesquisar';
 import { BoxFilterCategoria } from '../../components/BoxFilterCategoria';
 import { Row } from 'react-bootstrap';
 import CardProduto from '../../components/CardProduto';
@@ -14,8 +13,8 @@ import { useParams } from 'react-router';
 
 
 const Produtos = () => {
+  
   const { categoria } = useParams();
-
   // const produtos = [
   //   {
   //     "id": 1,
@@ -353,21 +352,35 @@ const Produtos = () => {
   const [paginaAtual, setPaginaAtual] = useState(0);
   const [produtos, setProdutos] = useState([]);
   const [checkd, setCecked] = useState('');
+  // const [categoria, setCategoria] = useState();
 
   const indexInicial = paginaAtual * itensPorPagina;
   const indexFinal = indexInicial + itensPorPagina;
   const qttExibir = produtos.slice(indexInicial, indexFinal);
 
+  function verificarFiltro(categoria, checkd) {
+    let url = '';
+    if (categoria === null)
+      url = `/produtos${checkd}`;
+    else if (`/produtos${checkd}` === '/produtos' && categoria)
+      url = `/produtos/categoria/${categoria}`;
+    else if (`/produtos${checkd}` !== '/produtos' 
+                && `/produtos${checkd}` !== `/produtos/categoria/${categoria.toLowerCase()}`)
+      url = `/produtos${checkd}`;
+
+    return url;
+  }
+
   const loadData = useCallback(() => {
     (async function loadDataa() {
       try {
-        const response = await api.get( categoria === '' ?  categoria : `/produtos${checkd}`);
+        const response = await api.get(verificarFiltro(categoria, checkd))
         setProdutos(response.data);
       } catch (error) {
         alert("Veridique sua conexão com a internet");
       }
     })()
-  }, [checkd]);
+  }, [checkd, categoria]);
 
   useEffect(() => {
     loadData();
@@ -380,10 +393,9 @@ const Produtos = () => {
 
   useEffect(() => {
     console.log(checkd)
-  }, [checkd])
+    console.log(categoria)
+  }, [checkd, categoria])
 
-  console.log("categoria")
-  console.log(categoria)
 
   return (
     <>

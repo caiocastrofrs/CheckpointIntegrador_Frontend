@@ -1,0 +1,25 @@
+@import '../../Sass/abstracts/mixins.scss';
+
+.anomacao-not-found {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px red solid;
+}
+
+.titulo-not-found {
+    position: relative;
+    text-align: center;
+    top: -17rem;
+    
+    @include respond(phone) {
+        top: -13rem;
+    }
+
+    @include respond(small-phone) {
+        top: -11rem;
+    }
+}
