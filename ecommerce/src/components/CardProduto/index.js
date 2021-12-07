@@ -1,5 +1,6 @@
 import './style.scss';
 import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import React from 'react'
 
@@ -10,19 +11,15 @@ const CardProduto = ({ produto }) => {
         return (produto.preco / parcela).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     }
 
-    function capturarId() {
-        console.log(produto.id)
-    }
-
     return (
-        <Card style={{
-            width: '25rem',
-            height: '35rem',
+        <Card as={Link} to={`/produtos/${produto.id}`} style={{
+            width: '250px',
+            height: '350px',
             margin: '1rem',
             padding: '0.7rem',
-            backgroundColor: 'rgb(236, 227, 220)',
+            textDecoration: 'none',
+            color: '#000'
         }}
-        onClick={capturarId}
         className="card-produto"
         >
             <div className="imagem-box-card">
@@ -36,10 +33,8 @@ const CardProduto = ({ produto }) => {
             <Card.Body style={{ height: '20%', }}>
                 <Card.Title style={{ fontSize: '25px' }}>{(produto.preco).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</Card.Title>
                 <spam className="desconto-produto">20% off</spam>
-                {/* <ListGroup className="list-group-flush" style={{ fontSize: '14px' }}> */}
                 <Card.Text style={{ fontSize: '16px' }}>{parcela}x {calcParcela()} sem juros</Card.Text>
                 <Card.Text style={{ fontSize: '14px' }}>Frete grátis</Card.Text>
-                {/* </ListGroup> */}
             </Card.Body>
         </Card>
     )

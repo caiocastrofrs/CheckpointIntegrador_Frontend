@@ -5,7 +5,7 @@ import { Dropdown } from 'react-bootstrap';
 export const BoxFilterCategoria = ({ setCecked }) => {
 
     const categorias = [
-        'Todos',
+        // 'Todos',
         'Bebê',
         'Games',
         'Esporte',
@@ -41,7 +41,7 @@ export const BoxFilterCategoria = ({ setCecked }) => {
                                             <Form.Check 
                                                 style={{ marginLeft: '5px' }}
                                                 type="radio" name="checked"
-                                                value={categoriaTratada === 'todos' ? '' : `/categoria/${categoriaTratada}`}
+                                                value={`/categoria/${categoriaTratada}`}
                                                 onClick={(e) => capturarCheckds(e)}
                                             />
                                             <span style={{ marginLeft: '5px' }}>{categoria}</span>

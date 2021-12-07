@@ -13,8 +13,8 @@ import { useParams } from 'react-router';
 
 
 const Produtos = () => {
-  
-  const { categoria } = useParams();
+
+  var { categoria } = useParams();
   // const produtos = [
   //   {
   //     "id": 1,
@@ -360,14 +360,17 @@ const Produtos = () => {
 
   function verificarFiltro(categoria, checkd) {
     let url = '';
-    if (categoria === null)
+    if (categoria === undefined){
       url = `/produtos${checkd}`;
-    else if (`/produtos${checkd}` === '/produtos' && categoria)
+    }
+    else if (`/produtos${checkd}` === '/produtos' && categoria !== undefined){
       url = `/produtos/categoria/${categoria}`;
-    else if (`/produtos${checkd}` !== '/produtos' 
-                && `/produtos${checkd}` !== `/produtos/categoria/${categoria.toLowerCase()}`)
+      categoria = undefined;
+    }
+    else if (`/produtos${checkd}` !== '/produtos'
+      && `/produtos${checkd}` !== `/produtos/categoria/${categoria.toLowerCase()}`) {
       url = `/produtos${checkd}`;
-
+    }
     return url;
   }
 
@@ -375,9 +378,10 @@ const Produtos = () => {
     (async function loadDataa() {
       try {
         const response = await api.get(verificarFiltro(categoria, checkd))
+        // const response = await api.get( categoria === null ?  `/produtos/categoria/${categoria}` : `/produtos${checkd}`);
         setProdutos(response.data);
       } catch (error) {
-        alert("Veridique sua conexão com a internet");
+        console.log("Verifique sua conexão com a internet");
       }
     })()
   }, [checkd, categoria]);
@@ -392,16 +396,16 @@ const Produtos = () => {
   }, [itensPorPagina])
 
   useEffect(() => {
-    console.log(checkd)
-    console.log(categoria)
-  }, [checkd, categoria])
-
+    categoria = undefined;
+    // console.log(checkd);
+    // console.log(categoria);
+  }, [checkd])
 
   return (
     <>
       <Helmet>
-        <title>Bodega | {checkd === '' ? 'Produtos' 
-            : (produtos[0].categoria.nomeCategoria)}
+        <title>Bodega | {checkd === '' ? 'Produtos'
+          : (produtos[0].categoria.nomeCategoria)}
 
         </title>
       </Helmet>
