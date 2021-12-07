@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './style.scss';
 import { Helmet } from 'react-helmet'
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 import { Container } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import CardProduto from '../../components/CardProduto';
@@ -78,7 +76,6 @@ const Produto = () => {
             <Helmet>
                 <title>Bodega | Produto</title>
             </Helmet>
-            <Header />
             <h2 className="title"> Console Xbox Series S 512gb </h2>
             {/* <h2 className="title"> {produto.titulo} </h2> */}
             <div className="container_produto">
@@ -123,8 +120,6 @@ const Produto = () => {
                         )}
                 </Row>
             </Container>
-
-            <Footer />
         </>
     );
 
