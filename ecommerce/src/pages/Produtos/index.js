@@ -2,12 +2,10 @@ import './style.scss';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet';
 import api from '../../service/api'
-import Header from '../../components/Header';
 import { BoxFilterCategoria } from '../../components/BoxFilterCategoria';
 import { Row } from 'react-bootstrap';
 import CardProduto from '../../components/CardProduto';
 import { Container } from 'react-bootstrap';
-import Footer from '../../components/Footer/index';
 import { Paginacao } from '../../components/Paginacao';
 import { useParams } from 'react-router';
 
@@ -409,7 +407,6 @@ const Produtos = () => {
 
         </title>
       </Helmet>
-      <Header />
       <main className="container-produtos m-auto col-xl-9">
 
         <BoxFilterCategoria
@@ -435,7 +432,6 @@ const Produtos = () => {
           numPaginas={Math.ceil(produtos.length / itensPorPagina)}
         />
       </main>
-      <Footer />
     </>
   );
 
