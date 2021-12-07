@@ -46,7 +46,12 @@ const Produto = () => {
             <h2 className="title"> {produto.titulo} </h2>
             <div className="container_produto">
                 <div className="container_imagem">
-                    <img className="imagem" src={produto.imagem} alt="" />
+                    <img style={{
+                        maxWidth: '400px',
+                        maxHeight: '400px',
+                        width: 'auto',
+                        height: 'auto',
+                    }} src={produto.imagem} alt={produto.titulo} />
                 </div>
                 <div className="container_descricao">
                     <div className="container_precoDesconto">
@@ -70,21 +75,22 @@ const Produto = () => {
 
             <p className="quemViu">Quem viu esse produto também comprou...</p>
             <div className="conatiner-sugeridos">
-                    {
-                        produtosCatg.map((item, index) => {
-                            var itemOpaco = 'item-opaco'
-                            return (
-                                <div className={
-                                    index >= 3  ? itemOpaco : ''
-                                }
-                                >
-                                <CardProduto 
-                                    key={item.id} 
+                {
+                    produtosCatg.map((item, index) => {
+                        var itemOpaco = 'item-opaco'
+                        return (
+                            <div className={
+                                index >= 3 ? itemOpaco : ''
+                            }
+                            >
+                                <CardProduto
+                                    key={item.id}
                                     produto={item}
                                 />
-                                </div>
-                            )}
-                    )} 
+                            </div>
+                        )
+                    }
+                    )}
             </div>
         </>
     );
