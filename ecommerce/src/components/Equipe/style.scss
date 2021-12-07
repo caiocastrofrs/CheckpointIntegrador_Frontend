@@ -36,14 +36,14 @@
 
             .section-equipe__container__integrante:hover {
                 transform: scale(1.05);
-                transition-duration:  0.4s;
-                box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.4);
+                transition-duration:  0.5s;
+                box-shadow: 6px 10px 15px rgba(0, 0, 0, 0.6);
             }
 
             .section-equipe__container__integrante__icon {
                 .iconLinkedin{
-                    color: $primary-color-light;
-                    opacity: 0.8;
+                    color: #ffd786;
+                    opacity: 0.9;
                     margin: 4px;
                 }
             }
@@ -51,15 +51,15 @@
             .section-equipe__container__integrante__icon {
                 .iconLinkedin:hover{
                 transform: scale(1.3);
-                opacity: 1;
+                color: #f5bb47;
                 transition-duration:  0.3s;
                 }
             }
 
             .section-equipe__container__integrante__icon {
                 .iconGitHub{
-                    color: $primary-color-light;
-                    opacity: 0.8;
+                    color: #ffd786;
+                    opacity: 0.9;
                     margin: 4px;
                 }   
             }
@@ -67,26 +67,26 @@
                 .iconGitHub:hover{
                 transform: scale(1.3);
                 transition-duration:  0.3s;
-                opacity: 1;
+                color: #f5bb47;
                 }
             }
 
             .section-equipe__container__integrante__titulo__nome {
                 justify-content: center;
-                color: $primary-color-light;
+                color: #f5bb47;
                 font-size: 2.5rem;
                 font-weight: bold;
             }   
 
             .text {
                 justify-content: center;
-                color: $primary-color;
-                font-size: 1.8rem;
+                color: #ceb0d6;
+                font-size: 1.9rem;
             }
 
             img{
                 border-radius:50%;
-                box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
+                box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.6);
             }
 
 }

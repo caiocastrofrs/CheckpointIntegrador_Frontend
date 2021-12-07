@@ -2,6 +2,7 @@
   "name": "ecommerce",
   "version": "0.1.0", 
   "private": true,
+  "proxy": "http://ec2-18-206-224-219.compute-1.amazonaws.com:8080",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.7",
