@@ -1,20 +1,23 @@
 import './style.scss';
-import React from 'react';
+import { useContext } from 'react';
 import { BsFillTrashFill } from 'react-icons/bs';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import { ProdutoContext } from '../../context/ProdutoContext';
 
 export const ItemCarrinho = ({ produto }) => {
 
-
+    const { removerProduto } = useContext(ProdutoContext);
 
     return (
         <div className="card mb-3" >
             <div className="row g-0 div-item">
                 <div className="col-md-4 mb-3 justify-content-center d-flex">
-                    <img as={Link} to={`/produtos/${produto.id}`} src={produto.imagem}
+                    <Link  to={`/produtos/${produto.id}`}>
+                    <img src={produto.imagem}
                         className="img-card img-fluid rounded-start" alt={produto.titulo}
-                    />
+                        />
+                    </Link>
                 </div>
                 <div className="col-md-2 mb-3 justify-content-center d-flex">
                     <button className="buttons-icons">
@@ -33,7 +36,10 @@ export const ItemCarrinho = ({ produto }) => {
                     </div>
                 </div>
                 <div className="col-md-1 div-trash mb-3">
-                    <button className="buttons-icons" >
+                    <button 
+                    onClick={() => removerProduto(produto)}
+                    className="buttons-icons" 
+                    >
                         <BsFillTrashFill size="20" />
                     </button>
                 </div>

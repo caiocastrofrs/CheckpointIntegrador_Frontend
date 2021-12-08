@@ -38,11 +38,18 @@ const Produto = () => {
         loadData();
     }, [loadData])
 
-    // const preco = produto.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+    function formatarPreco(p) {
+        let preco = p.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        console.log(preco)
+        return preco;
+    }
+    // console.log(formatarPreco(produto.preco))
+    
     const parcela = 12;
     function calcParcela() {
         return (produto.preco / parcela).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     }
+
 
     function addcarrinho() {
         adicionarProduto(produto);
@@ -54,11 +61,9 @@ const Produto = () => {
             <Helmet>
                 <title>Bodega | Produto</title>
             </Helmet>
-            {/* <h2 className="title"> Console Xbox Series S 512gb </h2> */}
             <h2 className="title"> {produto.titulo} </h2>
             <div className="container_produto">
                 <div className="container_imagem">
-                    {/* <img className="imagem" src="https://http2.mlstatic.com/D_NQ_NP_939935-MLB48431344222_122021-O.webp" alt="" /> */}
                     <img
                         style={{
                             maxWidth: '400px',
@@ -71,7 +76,7 @@ const Produto = () => {
                 </div>
                 <div className="container_descricao">
                     <div className="container_precoDesconto">
-                        <p className="preco">{produto.preco}</p>
+                        <p className="preco">{(produto.preco)}</p>
                         <p className="desconto">20% off</p>
                     </div>
                     <p className="dozeVezes">{parcela}x{calcParcela()} sem juros</p>

@@ -14,9 +14,10 @@ export const ProdutoContextProvider = ({ children }) => {
     }, [produtos])
 
     const adicionarProduto = (produto) => dispatch({type: 'ADD_PRODUT', payload: produto});
+    const removerProduto = (produto) => dispatch({type: 'REMOVE_PRODUT', payload: produto});
 
     return (
-        <ProdutoContext.Provider value={{produtos, adicionarProduto}}>
+        <ProdutoContext.Provider value={{produtos, adicionarProduto, removerProduto}}>
             {children}
         </ProdutoContext.Provider>
     )
