@@ -9,6 +9,9 @@ const CarouselComponent = () => {
 
   const produtos = useAxios('/produtos');
 
+  const carrosselpg1 = produtos.slice(0,3);
+  const carrosselpg2 = produtos.slice(3,6);
+  
 
   const checkItemIndex = (index) => {
     if (index === 0) {
@@ -28,8 +31,8 @@ const CarouselComponent = () => {
         <Carousel.Item>
           <Col xs={{ span: 6, offset: 3 }} sm={{ span: 11, offset: 1 }}  md={{ span: 12, offset: 0 }} lg={{ span: 10, offset: 1 }} xl={{ span: 8, offset: 2 }}>
             <Row>
-              {produtos &&
-                produtos.map((produto, index) => {
+              {carrosselpg1 &&
+                carrosselpg1.map((produto, index) => {
                   return (
                     <Col md={4} sm={6} className={checkItemIndex(index)}>
                       <CardProduto
@@ -46,8 +49,8 @@ const CarouselComponent = () => {
         <Carousel.Item>
           <Col xs={{ span: 6, offset: 3 }} sm={{ span: 11, offset: 1 }}  md={{ span: 12, offset: 0 }} lg={{ span: 10, offset: 1 }} xl={{ span: 8, offset: 2 }}>
             <Row>
-              {produtos &&
-                produtos.map((produto, index) => {
+              {carrosselpg2 &&
+                carrosselpg2.map((produto, index) => {
                   return (
                     <Col md={4} sm={6} className={checkItemIndex(index)}>
                       <CardProduto
