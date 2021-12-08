@@ -11,6 +11,7 @@
 .item-opaco {
   opacity: 0.7;
   &:hover {
+    transition: ease-in .3s;
     opacity: 1;
   }
 }
@@ -93,7 +94,8 @@
   max-width: 820px;
   
   &:hover {
-    max-width: 850px;
+    transition: ease-in .2s;
+    max-width: 870px;
   }
   * {
     scrollbar-width: auto;

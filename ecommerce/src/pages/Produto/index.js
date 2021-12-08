@@ -3,15 +3,23 @@ import './style.scss';
 import { Helmet } from 'react-helmet'
 import CardProduto from '../../components/CardProduto';
 import { useParams } from 'react-router';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useContext } from 'react';
 import api from '../../service/api'
+import { Link } from 'react-router-dom';
+// import useAxios from '../../components/hooks';
+import { ProdutoContext } from '../../context/ProdutoContext';//
+
 
 const Produto = () => {
 
+    const { id } = useParams();
+    const { adicionarProduto } = useContext(ProdutoContext);//
+
+    // const produto = useAxios(`/produtos/${id}`);
+    // const produtosCatg = useAxios(`/produtos/categoria/${produto.categoria.nomeCategoria}`)
+
     const [produto, setProduto] = useState({});
     const [produtosCatg, setProdutosCatg] = useState([]);
-
-    const { id } = useParams();
 
     const loadData = useCallback(() => {
         (async function loadDataa() {
@@ -25,14 +33,12 @@ const Produto = () => {
             }
         })()
     }, [id]);
-
-    // const preco = produto.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-
+  
     useEffect(() => {
         loadData();
-        // console.log(produto.preco)
     }, [loadData])
-
+    
+    // const preco = produto.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
     const parcela = 12;
     function calcParcela() {
         return (produto.preco / parcela).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
@@ -67,7 +73,8 @@ const Produto = () => {
                     </div>
 
                     <div className="container_botao">
-                        <a type="submit" className="buttonAdicionar" href="#">Adicionar ao carrinho</a>
+                        <Link to={"/carrinho"} className="buttonAdicionar">Adicionar ao carrinho</Link>
+                        {/* <a onClick={adicionarProduto(produto)} className="buttonAdicionar">Adicionar ao carrinho</a> */}
                     </div>
 
                 </div>

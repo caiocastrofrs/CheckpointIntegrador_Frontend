@@ -3,8 +3,13 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
+import { ProdutoContext } from "../../context/ProdutoContext";
+import { useContext } from "react";
 
 const Header = () => {
+
+  const { produtos } = useContext(ProdutoContext);
+
   return (
     <>
       <Navbar bg="light" expand="lg" id="header" className="mb-5">
@@ -14,7 +19,7 @@ const Header = () => {
           </Navbar.Brand>
           <Link to="/carrinho" className="header-container__link">
             <div className="header-container__link__div-carrinho posicao-carrinho">
-              <span className="header-container__link__div-carrinho__qntd-item">20</span>
+              <span className="header-container__link__div-carrinho__qntd-item">{produtos.lenght}</span>
               <AiOutlineShoppingCart className="header-container__link__div-carrinho__icon"  />
             </div>
           </Link>

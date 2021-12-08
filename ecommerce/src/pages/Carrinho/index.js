@@ -4,9 +4,14 @@ import{ Button } from 'react-bootstrap';
 import { BsFillTrashFill } from 'react-icons/bs';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import { ProdutoContext } from '../../context/ProdutoContext';
+import { useContext } from 'react';
 
 
 const Carrinho = () => {
+
+    // const { produtos } = useContext(ProdutoContext);
+
     return(
         <>
         <Helmet>
