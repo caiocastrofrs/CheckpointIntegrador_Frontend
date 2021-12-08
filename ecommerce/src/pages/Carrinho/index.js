@@ -2,23 +2,25 @@ import './style.scss';
 import { Helmet } from 'react-helmet';
 import { Button } from 'react-bootstrap';
 import { ItemCarrinho } from '../../components/ItemCarrinho';
-import { BsFillTrashFill } from 'react-icons/bs';
-import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { ProdutoContext } from '../../context/ProdutoContext';
 import { useContext } from 'react';
 
-
 const Carrinho = () => {
 
     const { produtos } = useContext(ProdutoContext);
-
-    console.log(produtos);
-
+    
+    const produtosExibir = new Map();
+    
+    produtos.forEach((produto) => {
+        if (!produtosExibir.has(produto.id))
+            produtosExibir.set(produto.id, produto);
+    })
+    
     function calcTotalCarrinho(p, formatado = false) {
         let total = 0;
         if (p.length > 0) {
-            let precos = produtos.map((produto) => produto.preco);
+            let precos = produtos.map((prod) => prod.preco);
             total = precos.reduce((soma, preco) => soma + preco);
         }
         if (formatado)
@@ -40,7 +42,7 @@ const Carrinho = () => {
             </Helmet>
             <section>
                 {
-                    produtos.length > 0 ? produtos.map(item => {
+                    [...produtosExibir.values()].length > 0 ? [...produtosExibir.values()].map(item => {
                         return (
                             <ItemCarrinho key={item.id} produto={item} />
                         )

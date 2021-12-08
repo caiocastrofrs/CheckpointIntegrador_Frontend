@@ -14,10 +14,11 @@ export const ProdutoContextProvider = ({ children }) => {
     }, [produtos])
 
     const adicionarProduto = (produto) => dispatch({type: 'ADD_PRODUT', payload: produto});
+    const decrementar = (produto) => dispatch({type: 'DEC_PRODUT', payload: produto});
     const removerProduto = (produto) => dispatch({type: 'REMOVE_PRODUT', payload: produto});
 
     return (
-        <ProdutoContext.Provider value={{produtos, adicionarProduto, removerProduto}}>
+        <ProdutoContext.Provider value={{produtos, adicionarProduto, removerProduto, decrementar}}>
             {children}
         </ProdutoContext.Provider>
     )

@@ -4,15 +4,12 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import Logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { ProdutoContext } from "../../context/ProdutoContext";
-import {  useEffect, useContext } from "react";
+import {  useContext } from "react";
 
 const Header = () => {
 
   const { produtos } = useContext(ProdutoContext);
-
-  useEffect(() => {
-    console.log(produtos instanceof Array)
-  }, [produtos])
+  let totalItensCarrinho = produtos.length;
 
   return (
     <>
@@ -23,7 +20,7 @@ const Header = () => {
           </Navbar.Brand>
           <Link to="/carrinho" className="header-container__link">
             <div className="header-container__link__div-carrinho posicao-carrinho">
-              <span className="header-container__link__div-carrinho__qntd-item">{produtos.length}</span>
+              <span className="header-container__link__div-carrinho__qntd-item">{totalItensCarrinho}</span>
               <AiOutlineShoppingCart className="header-container__link__div-carrinho__icon"  />
             </div>
           </Link>
