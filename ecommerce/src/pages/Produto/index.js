@@ -34,18 +34,21 @@ const Produto = () => {
             }
         })()
     }, [id]);
-  
+
     useEffect(() => {
         loadData();
     }, [loadData])
-    
+
     // const preco = produto.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
     const parcela = 12;
     function calcParcela() {
         return (produto.preco / parcela).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     }
 
-
+    function addcarrinho() {
+        adicionarProduto(produto);
+        console.log("adicionando item no carrinho " + produto.titulo);
+    }
 
     return (
         <>
@@ -57,46 +60,54 @@ const Produto = () => {
             <div className="container_produto">
                 <div className="container_imagem">
                     {/* <img className="imagem" src="https://http2.mlstatic.com/D_NQ_NP_939935-MLB48431344222_122021-O.webp" alt="" /> */}
-                    <img className="imagem" src={produto.imagem} alt="" />
+                    <img
+                        style={{
+                            maxWidth: '400px',
+                            maxHeight: '400px',
+                            width: 'auto',
+                            height: 'auto',
+                        }}
+                        src={produto.imagem} alt={produto.titulo}
+                    />
                 </div>
                 <div className="container_descricao">
                     <div className="container_precoDesconto">
-                        <p className="preco">R$ 2.499</p>
                         <p className="preco">{produto.preco}</p>
-                        {/* <p className="desconto">20% off</p> */}
+                        <p className="desconto">20% off</p>
                     </div>
-                    {/* <p className="dozeVezes">12xR$124,92 sem juros</p> */}
                     <p className="dozeVezes">{parcela}x{calcParcela()} sem juros</p>
                     <p className="freteGratis">Frete Grátis</p>
-                    {/* <p className="descricao">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas aspernatur cum tempore nihil necessitatibus explicabo, unde animi, </p> */}
                     <p className="descricao">{produto.descricao}</p>
 
                     <div className="container_botao">
                         <a className="buttonComprar" href="#">Comprar agora</a>
-                   </div>
+                    </div>
 
                     <div className="container_botao">
-                        <Link to={"/carrinho"} className="buttonAdicionar">Adicionar ao carrinho</Link>
-                        {/* <a onClick={adicionarProduto(produto)} className="buttonAdicionar">Adicionar ao carrinho</a> */}
+                        <a onClick={addcarrinho} className="buttonAdicionar">Adicionar ao carrinho</a>
                     </div>
 
                 </div>
             </div>
 
             <p className="quemViu">Quem viu esse produto também comprou...</p>
-            <Container fluid={true}>
-
-                <Row className="linha-produtos">
-
-                    {
-                        produtosCatg.map(item => {
-                            return (
-                                <CardProduto key={item.id} produto={item} />
-                            )
-                        }
-                        )}
-                </Row>
-            </Container>
+            <div className="conatiner-sugeridos">
+                {
+                    produtosCatg.map((item, index) => {
+                        var itemOpaco = 'item-opaco'
+                        return (
+                            <div className={
+                                index >= 3 ? itemOpaco : ''
+                            }
+                            >
+                                <CardProduto
+                                    key={item.id}
+                                    produto={item}
+                                />
+                            </div>
+                        )
+                    })}
+            </div>
         </>
     );
 

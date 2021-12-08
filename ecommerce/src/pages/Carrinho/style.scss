@@ -1,7 +1,8 @@
 .img-card {
     max-width:12rem !important;
-    
-
+    &:hover {
+        cursor: pointer;
+    }
 }
 .input-quant {    
     max-width: 7rem;
