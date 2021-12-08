@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
-import api from '../../service/api';
+import api from '../service/api';
 
 const useAxios = (url) => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     async function loadData() {

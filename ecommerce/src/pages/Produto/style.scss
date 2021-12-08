@@ -3,10 +3,6 @@
   margin: 15px 20px;
 }
 
-.container_produto {
-  max-height: 450px;
-  margin: 0 10px;
-}
 
 .item-opaco {
   opacity: 0.7;
@@ -15,10 +11,6 @@
     opacity: 1;
   }
 }
-
-// .container_descricao {
-  //   border: 1px gray solid;
-  // }
   
   .container_precoDesconto {
     display: flex;
@@ -37,6 +29,9 @@
   color: green;
 }
 
+.preco::before {
+  content:"R$ ";
+}
 .freteGratis {
   margin-left: 10px;
   font-size: 14px;
@@ -76,6 +71,7 @@
   text-decoration: none;
   margin-bottom: 20px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 
@@ -83,6 +79,7 @@
   margin: 30px 45px;
   margin-left: 30px;
   font-size: 16px;
+
 }
 
 .conatiner-sugeridos {
@@ -92,7 +89,6 @@
   overflow-y: hidden;
   overflow-x: scroll;
   max-width: 820px;
-  
   &:hover {
     transition: ease-in .2s;
     max-width: 870px;
@@ -117,39 +113,6 @@
   }
 }
 
-
-// @media (min-width:426px) {
-//   .container_produto {
-//     display: flex;
-//     justify-content: center;
-//     margin: 0 50px;
-//   }
-
-//   .container_imagem {
-//     width: 800px;
-//     height: 800px;
-//     text-align: center;
-//     border: 1px solid black;
-//   }
-
-//   .imagem {
-//     width: 100%;
-//     height: 500px;
-//   }
-
-//   .container_descricao {
-//     width: 2000px;
-//     height: 500px;
-//     border: 1px solid black;
-//     margin: 0px 50px;
-//     padding: 30px;
-    
-//   }
-// }
-
-
-
-
 @media (min-width:768px) {
   .container_produto {
     display: flex;
@@ -161,7 +124,6 @@
     width: 400px;
     height: 550px;
     text-align: center;
-    // border: 1px solid black;
   }
 
   .imagem {
@@ -172,8 +134,6 @@
   .container_descricao {
     width: 400px;
     height: 550px;
-    // border: 1px solid black;
-    // margin: 0px 50px;
     padding: 30px;
   }
 
@@ -193,9 +153,6 @@
   }
 
   .descricao {
-    // margin: 0 30px;
-    // line-height: 1.5;
-    // margin-bottom: 30px;
     font-size: 16px;
     margin-left: 30px;
   }
@@ -205,7 +162,6 @@
   }
 
   .quemViu {
-    // margin: 30px 20px;
     margin-left: 280px;
     font-size: 16px;
   }
@@ -215,7 +171,6 @@
   .quemViu {
     
     margin-left: 535px;
-    
   }
 }
 
