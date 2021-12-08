@@ -14,8 +14,6 @@ const Produto = () => {
     const { id } = useParams();
     const { adicionarProduto } = useContext(ProdutoContext);//
     
-    // const produto = useAxios(`/produtos/${id}`);
-    // const produtosCatg = useAxios(`/produtos/categoria/${produto.categoria.nomeCategoria}`)
 
     const [produto, setProduto] = useState({});
     const [produtosCatg, setProdutosCatg] = useState([]);
@@ -37,13 +35,6 @@ const Produto = () => {
     useEffect(() => {
         loadData();
     }, [loadData])
-
-    function formatarPreco(p) {
-        let preco = p.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-        console.log(preco)
-        return preco;
-    }
-    // console.log(formatarPreco(produto.preco))
     
     const parcela = 12;
     function calcParcela() {
@@ -66,8 +57,8 @@ const Produto = () => {
                 <div className="container_imagem">
                     <img
                         style={{
-                            maxWidth: '400px',
-                            maxHeight: '400px',
+                            maxWidth: '320px',
+                            maxHeight: '350px',
                             width: 'auto',
                             height: 'auto',
                         }}
@@ -93,7 +84,7 @@ const Produto = () => {
 
                 </div>
             </div>
-
+                    
             <p className="quemViu">Quem viu esse produto também comprou...</p>
             <div className="conatiner-sugeridos">
                 {
