@@ -1,13 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './style.scss';
 import { Helmet } from 'react-helmet'
-import { Container } from 'react-bootstrap';
-import { Row } from 'react-bootstrap';
 import CardProduto from '../../components/CardProduto';
 import { useParams } from 'react-router';
 import { useState, useEffect, useCallback, useContext } from 'react';
 import api from '../../service/api'
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 // import useAxios from '../../components/hooks';
 import { ProdutoContext } from '../../context/ProdutoContext';//
 
@@ -15,12 +13,13 @@ const Produto = () => {
 
     const { id } = useParams();
     const { adicionarProduto } = useContext(ProdutoContext);//
-
+    
     // const produto = useAxios(`/produtos/${id}`);
     // const produtosCatg = useAxios(`/produtos/categoria/${produto.categoria.nomeCategoria}`)
 
     const [produto, setProduto] = useState({});
     const [produtosCatg, setProdutosCatg] = useState([]);
+    const navigate = useNavigate();
 
     const loadData = useCallback(() => {
         (async function loadDataa() {
@@ -30,11 +29,11 @@ const Produto = () => {
                 const responsePorCatg = await api.get(`/produtos/categoria/${response.data.categoria.nomeCategoria}`);
                 setProdutosCatg(responsePorCatg.data)
             } catch (error) {
+                navigate('/404');
                 console.log("Verifique sua conexão com a internet");
             }
         })()
-    }, [id]);
-
+    }, [id, navigate]);
     useEffect(() => {
         loadData();
     }, [loadData])
