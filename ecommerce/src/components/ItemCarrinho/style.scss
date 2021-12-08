@@ -1,0 +1,36 @@
+.img-card {
+    max-width:12rem !important;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.input-quant {    
+    max-width: 7rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.texto {
+    display: flex !important;
+    justify-content: center !important;
+    .text-card {
+        font-size: 2.0rem;
+        .titulo-prod {
+            font-size: 2.2rem;
+            font-weight: 500;
+        }
+        .valor {
+            font-weight: 500;
+        }
+    }
+}
+
+.buttons-icons {
+    border:none;
+    background: none;
+    text-align: center; 
+    align-items: center; 
+      
+    
+}

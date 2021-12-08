@@ -1,45 +1,7 @@
-.img-card {
-    max-width:12rem !important;
-    &:hover {
-        cursor: pointer;
-    }
-}
-.input-quant {    
-    max-width: 7rem;
-    text-align: center;
-    font-size: 1.5rem;
-}
-
-.texto {
-    display: flex !important;
-    justify-content: center !important;
-    .text-card {
-        font-size: 2.0rem;
-        .titulo-prod {
-            font-size: 2.2rem;
-            font-weight: 500;
-        }
-        .valor {
-            font-weight: 500;
-        }
-    }
-}
-
-.buttons-icons {
-    border:none;
-    background: none;
-    text-align: center; 
-    align-items: center; 
-      
-    
-}
-
 .div-trash {    
     display: flex;    
     justify-content: flex-end !important;
     margin-right: 3rem;
-    
-
 }
 
 .div-total {    
@@ -48,31 +10,21 @@
     flex-direction:column;
     padding-right: 6.5rem;
     border-bottom: 1px solid #dee2e6;
-    
-    
     gap: 1rem;
     .div-total-valor {
         font-size: 2.3rem;
         font-weight: 500;
-
     }
     .div-total-x {
         font-size: 2rem;
     }
-       
-    
 }
-
 
 .div-item {
     display:flex;     
     justify-content: space-between;
     align-items: center;    
-    margin: 2rem 0 !important;
-    
-
-    
-    
+    margin: 2rem 0 !important;  
 }
 
 .buttons-compra {
