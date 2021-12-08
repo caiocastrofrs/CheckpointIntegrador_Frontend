@@ -357,7 +357,7 @@ const Produtos = () => {
   const qttExibir = produtos.slice(indexInicial, indexFinal);
 
   function verificarFiltro(categoria, checkd) {
-    let url = '';
+    let url = `/produtos${checkd}`;
     if (categoria === undefined){
       url = `/produtos${checkd}`;
     }
@@ -369,6 +369,7 @@ const Produtos = () => {
       && `/produtos${checkd}` !== `/produtos/categoria/${categoria.toLowerCase()}`) {
       url = `/produtos${checkd}`;
     }
+    console.log(url)
     return url;
   }
 

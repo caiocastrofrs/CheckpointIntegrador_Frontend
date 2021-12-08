@@ -16,6 +16,7 @@ export const BoxFilterCategoria = ({ setCecked }) => {
 
     function capturarCheckds({target}) {
         setCecked(target.value)
+        console.log(target.value)
     }
 
     return (
