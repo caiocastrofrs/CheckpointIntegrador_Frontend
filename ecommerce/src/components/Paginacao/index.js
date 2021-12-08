@@ -21,7 +21,7 @@ export const Paginacao = ({ numPaginas, qtdItens, setPaginaAtual, setitensPorPag
     return (
         <div className="menu-paginacao">
             {items}
-            <select
+            <select 
                 value={qtdItens}
                 onChange={(e) => setitensPorPagina(Number(e.target.value))}>
                 <option value={5}>5</option>

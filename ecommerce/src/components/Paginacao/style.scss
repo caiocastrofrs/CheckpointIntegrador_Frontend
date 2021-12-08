@@ -20,6 +20,15 @@
     width: 50px;
     height: 30px;
     margin: 5px;
-    background-color: aliceblue;
+    background-color: #3483fa;
+    color: #f3f3f3;
+    border: none;
     border-radius: 3px;
+    transition: all .3s;
+    outline: 1px solid transparent;
+    &:hover {
+        transform: scale(1.05);
+        outline-color: #3483fa;
+        outline-offset: .3rem;
+    }
 }
