@@ -1,3 +1,11 @@
+@import '../../Sass/abstracts/variables.scss';
+
 .footer {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    background-color: $secondary-color-light !important;
+}
+
+.link-item:link,
+.link-item:active {
+    color: $primary-color-dark !important;
 }
