@@ -36,7 +36,7 @@
                 display: inline-block;
                 position: absolute;
                 bottom: -30%;
-                left: -35%;
+                left: -55%;
                 font-size: 1.8rem;
             }
             &__icon {
@@ -59,6 +59,7 @@
                 @include respond(phone) {
                     font-size: 4rem;
                 }
+                transform: translateX(-2rem);
             }
         }
     }

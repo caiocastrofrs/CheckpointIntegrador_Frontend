@@ -15,7 +15,7 @@ const Header = () => {
     <>
       <Navbar bg="light" expand="lg" id="header" className="mb-5">
         <Container className="header-container">
-          <Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">
             <img src={Logo} alt="logo" className="logo img-fluid" />
           </Navbar.Brand>
           <Link to="/carrinho" className="header-container__link">
