@@ -15,7 +15,6 @@ const CardProduto = ({ produto }) => {
         <Card as={Link} to={`/produtos/${produto.id}`} style={{
             width: '250px',
             height: '350px',
-            margin: '1rem',
             padding: '0.7rem',
             textDecoration: 'none',
             color: '#000'
