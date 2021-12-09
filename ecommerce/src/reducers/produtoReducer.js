@@ -22,7 +22,7 @@ export const produtoReducer = (state, action) => {
           state.splice(index, 1);
           console.log(state);
         }
-        return state;
+        return [...state];
       default:
         return state;
     }

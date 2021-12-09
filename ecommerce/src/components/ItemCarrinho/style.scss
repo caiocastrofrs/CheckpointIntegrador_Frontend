@@ -1,3 +1,13 @@
+@import '../../Sass/abstracts/mixins.scss';
+
+.container-item-produto {
+    cursor: pointer;
+    transition: ease-out 0.2s;
+    box-shadow: -1px 2px .9rem  rgba(0, 0, 0, 0.479);
+    -webkit-box-shadow: -1px 2px .9rem  rgba(0, 0, 0, 0.479);
+    -moz-box-shadow: -1px 2px .9rem  rgba(0, 0, 0, 0.479);
+}
+
 .img-card {
     max-width:12rem !important;
     &:hover {
@@ -31,4 +41,22 @@
     background: none;
     text-align: center; 
     align-items: center; 
+}
+
+.info {
+    width: 100%;
+    
+    @include respond(phone) {
+        text-align: center;
+    }
+}
+
+.excluir {
+    @include respond(phone) {
+        padding: 10px;
+
+        .lixeira {
+            margin-right: 25px;
+        }
+    }
 }

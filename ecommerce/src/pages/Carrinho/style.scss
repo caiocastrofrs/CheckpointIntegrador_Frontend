@@ -1,3 +1,4 @@
+@import '../../Sass/abstracts/mixins.scss';
 .div-trash {    
     display: flex;    
     justify-content: flex-end !important;
@@ -11,12 +12,23 @@
     padding-right: 6.5rem;
     border-bottom: 1px solid #dee2e6;
     gap: 1rem;
+    
+    @include respond(phone) {
+        padding-right: 0;
+        align-items: center;
+    }
+    
     .div-total-valor {
         font-size: 2.3rem;
         font-weight: 500;
     }
     .div-total-x {
         font-size: 2rem;
+        
+        @include respond(phone) {
+            width: 100%;
+            text-align: center;
+        }
     }
 }
 
@@ -36,10 +48,15 @@
     margin-bottom: 10rem;
     margin-top: 3rem;
     gap: 1rem;
-
+    
     .btn-car {
         width: 19rem;
         font-size: 1.5rem;
         padding: 0.9rem;
+    }
+    
+    @include respond(phone) {
+        align-items: center;
+        padding-right: 0;
     }
 }
