@@ -26,11 +26,11 @@ const CarouselComponent = () => {
     <>
       <Carousel
         variant="dark"
-        className="my-5 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12  m-auto"
+        className="my-5 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-10  m-auto"
       >
-        <Carousel.Item>
-          <Col xs={{ span: 6, offset: 3 }} sm={{ span: 11, offset: 1 }}  md={{ span: 12, offset: 0 }} lg={{ span: 10, offset: 1 }} xl={{ span: 8, offset: 2 }}>
-            <Row>
+        <Carousel.Item >
+          <Col className="justify-content-center d-inline-flex g-5" xs={{ span: 12, offset: 0 }} sm={{ span: 12, offset: 0 }}  md={{ span: 12, offset: 0 }} lg={{ span: 10, offset: 1 }} xl={{ span: 10, offset: 1 }}>
+            <Row className="">
               {carrosselpg1 &&
                 carrosselpg1.map((produto, index) => {
                   return (
@@ -46,9 +46,9 @@ const CarouselComponent = () => {
             </Row>
           </Col>
         </Carousel.Item>
-        <Carousel.Item>
-          <Col xs={{ span: 6, offset: 3 }} sm={{ span: 11, offset: 1 }}  md={{ span: 12, offset: 0 }} lg={{ span: 10, offset: 1 }} xl={{ span: 8, offset: 2 }}>
-            <Row>
+        <Carousel.Item >
+          <Col className="justify-content-center d-inline-flex g-5" xs={{ span: 12, offset: 0 }} sm={{ span: 12, offset: 0 }}  md={{ span: 12, offset: 0 }} lg={{ span: 10, offset: 1 }} xl={{ span: 10, offset: 1 }}>
+            <Row className="">
               {carrosselpg2 &&
                 carrosselpg2.map((produto, index) => {
                   return (
